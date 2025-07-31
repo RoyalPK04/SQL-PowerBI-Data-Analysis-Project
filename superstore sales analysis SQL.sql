@@ -83,12 +83,12 @@ ORDER BY SUM(sales) DESC
 
 -- state level category exploration --
 SELECT 
-product_name,
+state,
 category,
 SUM(quantity) AS Total_quantity_sold
 FROM dbo.SuperStoreOrders
 GROUP BY 
-product_name,
+state,
 category
 ORDER BY SUM(quantity) DESC
 
