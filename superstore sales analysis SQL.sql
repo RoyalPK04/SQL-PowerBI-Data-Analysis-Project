@@ -53,7 +53,7 @@ ORDER BY AVG(profit)
 --time analysis --
 SELECT
 ship_mode,
-AVG(DATEDIFF(DAY, TRY_CAST(order_date AS DATE), TRY_CAST(ship_date AS DATE))) AS Avg_time_gape
+AVG(DATEDIFF(order_date,ship_date)) AS Avg_time_gape
 FROM dbo.SuperStoreOrders
 GROUP BY ship_mode
 
